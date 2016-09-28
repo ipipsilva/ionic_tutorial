@@ -13,8 +13,5 @@ angular.module('app.routes', [])
     controller: 'calculadoraCtrl'
   })
 
-$urlRouterProvider.otherwise('/page1')
-
-
-
+    $urlRouterProvider.otherwise('/page1')
 });

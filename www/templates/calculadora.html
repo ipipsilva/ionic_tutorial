@@ -1,33 +1,33 @@
 <ion-view title="Calculadora" id="page1" style="">
     <ion-content padding="true" class="has-header">
         <form id="calculadora-form3" class="list">
-            <label class="item item-input" id="calculadora-input3" name="display">
-                <input placeholder="0" type="text">
+            <label class="item item-input" id="calculadora-input3" name="resultado">
+                <input placeholder="0" type="text" ng-model="resultado">
             </label>
         </form>
         <div id="calculadora-button-bar1" class="button-bar">
-            <button id="calculadora-button1" class="button button-positive  button-block button-outline">7</button>
-            <button id="calculadora-button2" class="button button-positive  button-block button-outline">8</button>
-            <button id="calculadora-button3" class="button button-positive  button-block button-outline">9</button>
-            <button id="calculadora-button14" class="button button-energized  button-block">/</button>
+            <button id="calculadora-button1" class="button button-positive  button-block button-outline" ng-click="cliqueBotao('7')">7</button>
+            <button id="calculadora-button2" class="button button-positive  button-block button-outline" ng-click="cliqueBotao('8')">8</button>
+            <button id="calculadora-button3" class="button button-positive  button-block button-outline" ng-click="cliqueBotao('9')">9</button>
+            <button id="calculadora-button14" class="button button-energized  button-block" ng-click="cliqueBotao('/')">/</button>
         </div>
         <div id="calculadora-button-bar5" class="button-bar">
-            <button id="calculadora-button16" class="button button-positive  button-block button-outline">4</button>
-            <button id="calculadora-button17" class="button button-positive  button-block button-outline">5</button>
-            <button id="calculadora-button18" class="button button-positive  button-block button-outline">6</button>
-            <button id="calculadora-button22" class="button button-energized  button-block">x</button>
+            <button id="calculadora-button16" class="button button-positive  button-block button-outline" ng-click="cliqueBotao('4')">4</button>
+            <button id="calculadora-button17" class="button button-positive  button-block button-outline" ng-click="cliqueBotao('5')">5</button>
+            <button id="calculadora-button18" class="button button-positive  button-block button-outline" ng-click="cliqueBotao('6')">6</button>
+            <button id="calculadora-button22" class="button button-energized  button-block" ng-click="cliqueBotao('*')">x</button>
         </div>
         <div id="calculadora-button-bar6" class="button-bar">
-            <button id="calculadora-button19" class="button button-positive  button-block button-outline">1</button>
-            <button id="calculadora-button20" class="button button-positive  button-block button-outline">2</button>
-            <button id="calculadora-button21" class="button button-positive  button-block button-outline">3</button>
-            <button id="calculadora-button23" class="button button-energized  button-block">-</button>
+            <button id="calculadora-button19" class="button button-positive  button-block button-outline" ng-click="cliqueBotao('1')">1</button>
+            <button id="calculadora-button20" class="button button-positive  button-block button-outline" ng-click="cliqueBotao('2')">2</button>
+            <button id="calculadora-button21" class="button button-positive  button-block button-outline" ng-click="cliqueBotao('3')">3</button>
+            <button id="calculadora-button23" class="button button-energized  button-block" ng-click="cliqueBotao('-')">-</button>
         </div>
         <div id="calculadora-button-bar7" class="button-bar">
-            <button id="calculadora-button24" class="button button-assertive  button-block">C</button>
-            <button id="calculadora-button25" class="button button-positive  button-block button-outline">0</button>
-            <button id="calculadora-button26" class="button button-positive  button-block">=</button>
-            <button id="calculadora-button30" class="button button-energized  button-block">+</button>
+            <button id="calculadora-button24" class="button button-assertive  button-block" ng-click="cliqueBotao('C')">C</button>
+            <button id="calculadora-button25" class="button button-positive  button-block button-outline" ng-click="cliqueBotao('0')">0</button>
+            <button id="calculadora-button26" class="button button-positive  button-block" ng-click="cliqueBotao('=')">=</button>
+            <button id="calculadora-button30" class="button button-energized  button-block" ng-click="cliqueBotao('+')">+</button>
         </div>
     </ion-content>
 </ion-view>

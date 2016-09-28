@@ -1,10 +1,31 @@
 angular.module('app.controllers', [])
-  
-.controller('calculadoraCtrl', ['$scope', '$stateParams', // The following is the constructor function for this page's controller. See https://docs.angularjs.org/guide/controller
-// You can include any angular dependencies as parameters for this function
-// TIP: Access Route Parameters for your page via $stateParams.parameterName
-function ($scope, $stateParams) {
 
+.controller('calculadoraCtrl', ['$scope', '$stateParams', '$ionicPopup', function ($scope, $stateParams, $ionicPopup) {
+
+    $scope.resultado = '';
+
+    $scope.cliqueBotao = function(valorBotao){
+        if(valorBotao === 'C') {
+            $scope.resultado = '';
+        } else if (valorBotao === '=') {
+            if($scope.resultado === '') {
+                return;
+            }
+
+            try {
+              $scope.resultado = eval($scope.resultado);
+            } catch(err){
+                $ionicPopup.alert({
+                    title: 'Expressão incorreta',
+                    template: "Ooops, tente novamente..."
+                });
+
+                $scope.resultado = '';
+            }
+
+        } else {
+            $scope.resultado += valorBotao;
+        }
+    };
 
 }])
- 
